@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Percentage:</strong>
+  <%= @blend.percentage %>
+</p>
+
+<p>
+  <strong>Wine:</strong>
+  <%= @blend.wine_id %>
+</p>
+
+<p>
+  <strong>Strain:</strong>
+  <%= @blend.strain_id %>
+</p>
+
+<%= link_to 'Edit', edit_blend_path(@blend) %> |
+<%= link_to 'Back', blends_path %>
