@@ -26,6 +26,13 @@
     <%= form.number_field :year %>
   </div>
 
+  <%= form.fields_for :blends do |blend| %>
+    <div class="field">
+      <%= blend.select :strain_id, @strains %>
+      <%= blend.number_field :percentage %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= form.submit %>
   </div>

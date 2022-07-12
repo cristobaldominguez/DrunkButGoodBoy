@@ -15,5 +15,14 @@
   <%= @wine.year %>
 </p>
 
+<% if @wine.strains.present? %>
+<h3>Cepas:</h3>
+<ul>
+  <% @wine.blends.each do |blend| %>
+  <li><strong><%= blend.strain.name %>:</strong> <%= blend.percentage %>%</li>
+  <% end %>
+</ul>
+<% end %>
+
 <%= link_to 'Edit', edit_wine_path(@wine) %> |
 <%= link_to 'Back', wines_path %>
