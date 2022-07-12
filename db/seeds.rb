@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Strain.destroy_all
+
+cepas = [
+    { name: 'Carmenere', origin: 'Colchagua' },
+    { name: 'Pais', origin: 'Colchagua' },
+    { name: 'Cabernet', origin: 'Cachapoal' }
+]
+
+cepas.each do |cepa|
+    strain = Strain.create(name: cepa[:name], origin: cepa[:origin])
+    puts "Cepa: #{strain.name}"
+end
