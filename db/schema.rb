@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_07_11_234145) do
   enable_extension "plpgsql"
 
   create_table "blends", force: :cascade do |t|
-    t.integer "percentage", default: 0
+    t.integer "percentage"
     t.bigint "wine_id", null: false
     t.bigint "strain_id", null: false
     t.datetime "created_at", precision: 6, null: false
